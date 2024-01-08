@@ -6,7 +6,7 @@ public class App {
 
 	public static void main(String[] args) {
 		Person pearson = new Person(22, "pearson");
-		Person parson = new Person(23, "parson");
+		Person parson = new Person(24, "parson");
 		Person piercesSon = new Person(27, "Pierce's Son");
 		Person[] persons = {pearson, parson, piercesSon};
 		People people = new People(persons);
