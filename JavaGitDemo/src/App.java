@@ -8,7 +8,8 @@ public class App {
 		Person pearson = new Person(22, "pearson");
 		Person parson = new Person(24, "parson");
 		Person piercesSon = new Person(27, "Pierce's Son");
-		Person[] persons = {pearson, parson, piercesSon};
+		Person p = new Person(32, "p");
+		Person[] persons = {pearson, parson, piercesSon, p};
 		People people = new People(persons);
 		people.printPeople();
 		
