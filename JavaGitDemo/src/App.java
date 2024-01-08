@@ -5,44 +5,23 @@ import java.util.Scanner;
 public class App {
 
 	public static void main(String[] args) {
-		Person pearson = new Person(22, "pearson");
-		Person parson = new Person(24, "parson");
-		Person piercesSon = new Person(27, "Pierce's Son");
-		Person p = new Person(32, "p");
-		Person[] persons = {pearson, parson, piercesSon, p};
-		People people = new People(persons);
-		people.printPeople();
+		System.out.println(Thing.numberOfThings);
+		Thing thing1 = new Thing(22);
+		System.out.println(thing1.age);
+		System.out.println(Thing.numberOfThings);
+		Thing thing2 = new Thing(24);
+		System.out.println(thing2.age);
+		System.out.println(Thing.numberOfThings);
 		
 	}
 }
 
-class Person {
-	int age;
-	String name;
+class Thing {
+	public static int numberOfThings;
+	public int age;
 	
-	Person(int age, String name) {
+	Thing(int age) {
 		this.age = age;
-		this.name = name;
-	}
-	
-	void printPerson() {
-		System.out.println("Person named " + this.name + " is " + this.age + " years old.");
+		numberOfThings++;
 	}
 }
-
-class People {
-	Person[] people;
-	
-	People(Person[] people) {
-		this.people = people;
-	}
-	
-	void printPeople() {
-		for (Person p : people) {
-			p.printPerson();
-		}
-	}
-}
-
-
-
